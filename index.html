@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="Zobia Zahoor - Full-Stack Web Developer specializing in Laravel, PHP, JavaScript, MySQL, and responsive web applications.">
+
+    <meta name="author" content="Zobia Zahoor">
+
+    <title>Zobia Zahoor | Full-Stack Web Developer</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Inter", "Segoe UI", Arial, sans-serif;
+            line-height: 1.7;
+            color: #e2e8f0;
+            background:
+                radial-gradient(circle at 90% 5%, rgba(20, 184, 166, 0.12), transparent 28%),
+                radial-gradient(circle at 5% 90%, rgba(99, 102, 241, 0.10), transparent 28%),
+                #07111f;
+            min-height: 100vh;
+        }
+
+        .container {
+            width: min(1100px, 92%);
+            margin: 45px auto;
+            padding: 55px;
+            background: rgba(15, 23, 42, 0.88);
+            border: 1px solid rgba(148, 163, 184, 0.14);
+            border-radius: 24px;
+            box-shadow: 0 25px 70px rgba(0, 0, 0, 0.35);
+            backdrop-filter: blur(14px);
+        }
+
+        /* =========================
+       HERO
+    ========================== */
+
+        header {
+            padding: 15px 0 45px;
+            margin-bottom: 50px;
+            border-bottom: 1px solid rgba(148, 163, 184, 0.14);
+        }
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 7px 14px;
+            margin-bottom: 20px;
+            border: 1px solid rgba(20, 184, 166, 0.30);
+            border-radius: 999px;
+            color: #5eead4;
+            background: rgba(20, 184, 166, 0.08);
+            font-size: 0.78rem;
+            font-weight: 700;
+            letter-spacing: 0.7px;
+        }
+
+        .badge::before {
+            content: "";
+            width: 7px;
+            height: 7px;
+            background: #2dd4bf;
+            border-radius: 50%;
+            box-shadow: 0 0 12px rgba(45, 212, 191, 0.8);
+        }
+
+        h1 {
+            color: #f8fafc;
+            font-size: clamp(2.7rem, 6vw, 4.6rem);
+            line-height: 1.05;
+            letter-spacing: -2.5px;
+        }
+
+        .highlight {
+            color: #2dd4bf;
+        }
+
+        .headline {
+            margin-top: 18px;
+            color: #cbd5e1;
+            font-size: 1.05rem;
+            font-weight: 600;
+        }
+
+        .subtitle {
+            max-width: 780px;
+            margin-top: 12px;
+            color: #94a3b8;
+            font-size: 1.05rem;
+        }
+
+        /* =========================
+       GENERAL SECTIONS
+    ========================== */
+
+        section {
+            margin-bottom: 58px;
+        }
+
+        h2 {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 22px;
+            color: #f8fafc;
+            font-size: 1.45rem;
+        }
+
+        h2::before {
+            content: "";
+            width: 4px;
+            height: 27px;
+            border-radius: 10px;
+            background: linear-gradient(#2dd4bf, #6366f1);
+        }
+
+        section p {
+            max-width: 900px;
+            color: #94a3b8;
+            font-size: 0.98rem;
+        }
+
+        /* =========================
+       WHAT I DO
+    ========================== */
+
+        .development-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 14px;
+        }
+
+        .development-card {
+            padding: 23px 19px;
+            border-radius: 16px;
+            background: linear-gradient(145deg,
+                    rgba(30, 41, 59, 0.78),
+                    rgba(15, 23, 42, 0.90));
+            border: 1px solid rgba(148, 163, 184, 0.13);
+            transition: 0.25s ease;
+        }
+
+        .development-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(45, 212, 191, 0.38);
+        }
+
+        .development-number {
+            color: #2dd4bf;
+            font-size: 0.72rem;
+            font-weight: 800;
+            letter-spacing: 1px;
+        }
+
+        .development-card h3 {
+            margin: 8px 0 5px;
+            color: #f1f5f9;
+            font-size: 1rem;
+        }
+
+        .development-card p {
+            color: #64748b;
+            font-size: 0.82rem;
+            line-height: 1.5;
+        }
+
+        /* =========================
+       TECH STACK
+    ========================== */
+
+        .skills-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(175px, 1fr));
+            gap: 13px;
+            list-style: none;
+        }
+
+        .skills-list li {
+            padding: 16px 17px;
+            border: 1px solid rgba(148, 163, 184, 0.13);
+            border-radius: 14px;
+            background: rgba(30, 41, 59, 0.55);
+            color: #e2e8f0;
+            font-weight: 650;
+            transition: 0.25s ease;
+        }
+
+        .skills-list li:hover {
+            transform: translateY(-4px);
+            border-color: rgba(45, 212, 191, 0.40);
+            background: rgba(20, 184, 166, 0.08);
+        }
+
+        .skills-list span {
+            display: block;
+            margin-top: 3px;
+            color: #64748b;
+            font-size: 0.75rem;
+            font-weight: 500;
+        }
+
+        /* =========================
+       EDUCATION
+    ========================== */
+
+        .education-card {
+            padding: 25px;
+            border-radius: 16px;
+            background: rgba(30, 41, 59, 0.50);
+            border: 1px solid rgba(148, 163, 184, 0.13);
+        }
+
+        .education-card strong {
+            display: block;
+            margin-bottom: 5px;
+            color: #f1f5f9;
+            font-size: 1.05rem;
+        }
+
+        .education-card span {
+            color: #64748b;
+        }
+
+        /* =========================
+       CONTACT
+    ========================== */
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(250px, 350px));
+            justify-content: center;
+            gap: 24px;
+        }
+
+        .contact-card {
+            padding: 20px;
+            border-radius: 15px;
+            background: rgba(30, 41, 59, 0.50);
+            border: 1px solid rgba(148, 163, 184, 0.13);
+            transition: 0.25s ease;
+        }
+
+        .contact-card:hover {
+            transform: translateY(-3px);
+            border-color: rgba(45, 212, 191, 0.35);
+        }
+
+        .contact-card small {
+            display: block;
+            margin-bottom: 5px;
+            color: #64748b;
+            font-size: 0.76rem;
+        }
+
+        .contact-card a {
+            color: #5eead4;
+            text-decoration: none;
+            word-break: break-word;
+        }
+
+        .contact-card a:hover {
+            color: #99f6e4;
+        }
+
+        /* =========================
+       FOOTER
+    ========================== */
+
+        footer {
+            padding: 25px;
+            text-align: center;
+            color: #64748b;
+            font-size: 0.82rem;
+        }
+
+        /* =========================
+       RESPONSIVE
+    ========================== */
+
+        @media (max-width: 850px) {
+
+            .container {
+                padding: 38px 28px;
+                margin: 25px auto;
+            }
+
+            .development-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 560px) {
+
+            .container {
+                width: 94%;
+                padding: 30px 20px;
+                border-radius: 18px;
+            }
+
+            h1 {
+                font-size: 2.5rem;
+                letter-spacing: -1.5px;
+            }
+
+            .headline {
+                font-size: 0.9rem;
+            }
+
+            .subtitle {
+                font-size: 0.95rem;
+            }
+
+            .development-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .skills-list {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 390px) {
+
+            .skills-list {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <main class="container">
+
+        <!-- =========================
+         HERO
+    ========================== -->
+
+        <header>
+
+            <div class="badge">
+                FULL-STACK WEB DEVELOPER
+            </div>
+
+            <h1>
+                ZOBIA <span class="highlight">ZAHOOR</span>
+            </h1>
+
+            <p class="headline">
+                Laravel &amp; PHP &nbsp;|&nbsp;
+                JavaScript &nbsp;|&nbsp;
+                MySQL
+            </p>
+
+            <p class="subtitle">
+                Building scalable and responsive web applications
+                through modern frontend and backend development.
+            </p>
+
+        </header>
+
+
+        <!-- =========================
+         PROFESSIONAL SUMMARY
+    ========================== -->
+
+        <section id="about">
+
+            <h2>Professional Summary</h2>
+
+            <p>
+                I am a Bachelor of Information Technology student and
+                Full-Stack Web Developer focused on developing scalable,
+                responsive, and user-friendly web applications. I work
+                across both frontend and backend development, using
+                Laravel and PHP for application logic, JavaScript for
+                interactive experiences, and MySQL for structured data
+                management.
+            </p>
+
+            <br>
+
+            <p>
+                I enjoy turning ideas and requirements into practical
+                web solutions through clean code, responsive interfaces,
+                structured application architecture, efficient database
+                design, and reliable development practices.
+            </p>
+
+        </section>
+
+
+        <!-- =========================
+         WHAT I DO
+    ========================== -->
+
+        <section id="development">
+
+            <h2>What I Do</h2>
+
+            <div class="development-grid">
+
+                <div class="development-card">
+
+                    <div class="development-number">
+                        01 / FRONTEND
+                    </div>
+
+                    <h3>Responsive Interfaces</h3>
+
+                    <p>
+                        Building clean and responsive interfaces
+                        using HTML, CSS, Tailwind CSS, and JavaScript.
+                    </p>
+
+                </div>
+
+
+                <div class="development-card">
+
+                    <div class="development-number">
+                        02 / BACKEND
+                    </div>
+
+                    <h3>Web Application Development</h3>
+
+                    <p>
+                        Developing structured backend systems and
+                        application logic with Laravel and PHP.
+                    </p>
+
+                </div>
+
+
+                <div class="development-card">
+
+                    <div class="development-number">
+                        03 / DATABASE
+                    </div>
+
+                    <h3>Data Management</h3>
+
+                    <p>
+                        Designing and managing structured application
+                        data using MySQL.
+                    </p>
+
+                </div>
+
+
+                <div class="development-card">
+
+                    <div class="development-number">
+                        04 / INTEGRATION
+                    </div>
+
+                    <h3>APIs &amp; Architecture</h3>
+
+                    <p>
+                        Working with REST APIs, MVC architecture,
+                        and version-controlled development.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+         TECH STACK
+    ========================== -->
+
+        <section id="skills">
+
+            <h2>Tech Stack &amp; Skills</h2>
+
+            <ul class="skills-list">
+
+                <li>
+                    Laravel
+                    <span>PHP Framework</span>
+                </li>
+
+                <li>
+                    PHP
+                    <span>Backend Development</span>
+                </li>
+
+                <li>
+                    JavaScript
+                    <span>Web Interactivity</span>
+                </li>
+
+                <li>
+                    MySQL
+                    <span>Database Management</span>
+                </li>
+
+                <li>
+                    Tailwind CSS
+                    <span>Utility-First Styling</span>
+                </li>
+
+                <li>
+                    HTML5
+                    <span>Web Structure</span>
+                </li>
+
+                <li>
+                    CSS3
+                    <span>Responsive Styling</span>
+                </li>
+
+                <li>
+                    Blade
+                    <span>Laravel Templating</span>
+                </li>
+
+                <li>
+                    REST APIs
+                    <span>Application Integration</span>
+                </li>
+
+                <li>
+                    MVC Architecture
+                    <span>Application Structure</span>
+                </li>
+
+                <li>
+                    Git &amp; GitLab
+                    <span>Version Control</span>
+                </li>
+
+                <li>
+                    Responsive Design
+                    <span>Mobile-Friendly Interfaces</span>
+                </li>
+
+                <li>
+                    VS Code
+                    <span>Development Environment</span>
+                </li>
+
+            </ul>
+
+        </section>
+
+
+        <!-- =========================
+         EDUCATION
+    ========================== -->
+
+        <section id="education">
+
+            <h2>Education</h2>
+
+            <div class="education-card">
+
+                <strong>
+                    Bachelor of Information Technology
+                </strong>
+
+                <span>
+                    Virtual University • In Progress
+                </span>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+         CONTACT
+    ========================== -->
+
+        <section id="contact">
+
+            <h2>Let's Connect</h2>
+
+            <div class="contact-grid">
+
+                <!-- Email -->
+                <div class="contact-card">
+                    <small>Email</small>
+
+                    <a href="mailto:zubiazahoor48@gmail.com">
+                        zubiazahoor48@gmail.com
+                    </a>
+                </div>
+
+                <!-- LinkedIn -->
+                <div class="contact-card">
+                    <small>LinkedIn</small>
+
+                    <a href="https://www.linkedin.com/in/zubia-zahoor-134717344/" target="_blank"
+                        rel="noopener noreferrer">
+                        View LinkedIn Profile
+                    </a>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+        © 2026 Zobia Zahoor • Full-Stack Web Developer
+    </footer>
+
+</body>
+
+</html>
