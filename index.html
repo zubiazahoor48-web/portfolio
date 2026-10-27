@@ -216,6 +216,110 @@
         }
 
         /* =========================
+       PROJECTS
+    ========================== */
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+        }
+
+        .project-card {
+            display: flex;
+            flex-direction: column;
+            padding: 24px 21px;
+            border-radius: 16px;
+            background: linear-gradient(145deg,
+                    rgba(30, 41, 59, 0.78),
+                    rgba(15, 23, 42, 0.90));
+            border: 1px solid rgba(148, 163, 184, 0.13);
+            transition: 0.25s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(45, 212, 191, 0.38);
+        }
+
+        .project-number {
+            color: #2dd4bf;
+            font-size: 0.72rem;
+            font-weight: 800;
+            letter-spacing: 1px;
+        }
+
+        .project-card h3 {
+            margin: 8px 0 8px;
+            color: #f1f5f9;
+            font-size: 1.1rem;
+        }
+
+        .project-card p {
+            color: #94a3b8;
+            font-size: 0.86rem;
+            line-height: 1.6;
+        }
+
+        .project-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 7px;
+            margin: 16px 0 20px;
+            list-style: none;
+        }
+
+        .project-tags li {
+            padding: 3px 10px;
+            border: 1px solid rgba(99, 102, 241, 0.30);
+            border-radius: 999px;
+            background: rgba(99, 102, 241, 0.10);
+            color: #c7d2fe;
+            font-size: 0.72rem;
+            font-weight: 600;
+        }
+
+        .project-links {
+            display: flex;
+            gap: 10px;
+            margin-top: auto;
+        }
+
+        .project-links a {
+            padding: 8px 16px;
+            border: 1px solid rgba(45, 212, 191, 0.40);
+            border-radius: 10px;
+            color: #5eead4;
+            font-size: 0.82rem;
+            font-weight: 650;
+            text-decoration: none;
+            transition: 0.25s ease;
+        }
+
+        .project-links a:hover {
+            background: rgba(20, 184, 166, 0.14);
+            color: #99f6e4;
+        }
+
+        .project-links a.primary {
+            background: #14b8a6;
+            border-color: #14b8a6;
+            color: #04201d;
+        }
+
+        .project-links a.primary:hover {
+            background: #2dd4bf;
+            border-color: #2dd4bf;
+            color: #04201d;
+        }
+
+        .project-links a:focus-visible,
+        .contact-card a:focus-visible {
+            outline: 2px solid #818cf8;
+            outline-offset: 3px;
+        }
+
+        /* =========================
        EDUCATION
     ========================== */
 
@@ -304,6 +408,10 @@
                 grid-template-columns: repeat(2, 1fr);
             }
 
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+
             .contact-grid {
                 grid-template-columns: 1fr;
             }
@@ -343,6 +451,20 @@
 
             .skills-list {
                 grid-template-columns: 1fr;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+
+            html {
+                scroll-behavior: auto;
+            }
+
+            .development-card,
+            .skills-list li,
+            .project-card,
+            .contact-card {
+                transition: none;
             }
         }
     </style>
@@ -565,6 +687,136 @@
                 </li>
 
             </ul>
+
+        </section>
+
+
+        <!-- =========================
+         PROJECTS
+         TODO: replace every "your-username" link below with your real GitHub links.
+    ========================== -->
+
+        <section id="projects">
+
+            <h2>Projects</h2>
+
+            <div class="projects-grid">
+
+                <!-- Project 1: Expense Tracker -->
+                <article class="project-card">
+
+                    <div class="project-number">
+                        01 / FRONTEND
+                    </div>
+
+                    <h3>Kharcha – Expense Tracker</h3>
+
+                    <p>
+                        Track income and expenses, filter by month and type,
+                        and see spending by category in a chart. Data is saved
+                        in the browser and can be exported to CSV.
+                    </p>
+
+                    <ul class="project-tags">
+                        <li>HTML</li>
+                        <li>JavaScript</li>
+                        <li>Bootstrap</li>
+                        <li>Tailwind CSS</li>
+                        <li>Chart.js</li>
+                    </ul>
+
+                    <div class="project-links">
+                        <!-- TODO: live demo link (GitHub Pages) -->
+                        <a class="primary" href=" https://zubiazahoor48-web.github.io/Kharcha-Expense-Tracker/" target="_blank"
+                            rel="noopener noreferrer" aria-label="Kharcha Expense Tracker live demo">
+                            Live Demo
+                        </a>
+                        <!-- TODO: GitHub repo link -->
+                        <a href=" https://zubiazahoor48-web.github.io/Kharcha-Expense-Tracker/" target="_blank"
+                            rel="noopener noreferrer" aria-label="Kharcha Expense Tracker source code on GitHub">
+                            GitHub
+                        </a>
+                    </div>
+
+                </article>
+
+
+                <!-- Project 2: Task Board -->
+                <article class="project-card">
+
+                    <div class="project-number">
+                        02 / FRONTEND
+                    </div>
+
+                    <h3>Flowboard – Task Board</h3>
+
+                    <p>
+                        A Kanban board with drag and drop, priorities, due dates
+                        and overdue highlights, plus search, filters and
+                        keyboard-friendly controls.
+                    </p>
+
+                    <ul class="project-tags">
+                        <li>HTML</li>
+                        <li>JavaScript</li>
+                        <li>Bootstrap</li>
+                        <li>Tailwind CSS</li>
+                    </ul>
+
+                    <div class="project-links">
+                        <!-- TODO: live demo link (GitHub Pages) -->
+                        <a class="primary" href="https://zubiazahoor48-web.github.io/Flowboard/" target="_blank"
+                            rel="noopener noreferrer" aria-label="Flowboard Task Board live demo">
+                            Live Demo
+                        </a>
+                        <!-- TODO: GitHub repo link -->
+                        <a href="https://zubiazahoor48-web.github.io/Flowboard/" target="_blank"
+                            rel="noopener noreferrer" aria-label="Flowboard Task Board source code on GitHub">
+                            GitHub
+                        </a>
+                    </div>
+
+                </article>
+
+
+                <!-- Project 3: Weather App -->
+                <article class="project-card">
+
+                    <div class="project-number">
+                        03 / API
+                    </div>
+
+                    <h3>Skycast – Weather App</h3>
+
+                    <p>
+                        Search any city for current weather and a 7-day forecast
+                        using the Open-Meteo API, with °C/°F switching and
+                        device location support.
+                    </p>
+
+                    <ul class="project-tags">
+                        <li>JavaScript</li>
+                        <li>REST API</li>
+                        <li>Bootstrap</li>
+                        <li>Tailwind CSS</li>
+                    </ul>
+
+                    <div class="project-links">
+                        <!-- TODO: live demo link (GitHub Pages) -->
+                        <a class="primary" href="https://zubiazahoor48-web.github.io/Skycast/" target="_blank"
+                            rel="noopener noreferrer" aria-label="Skycast Weather App live demo">
+                            Live Demo
+                        </a>
+                        <!-- TODO: GitHub repo link -->
+                        <a href="https://zubiazahoor48-web.github.io/Skycast/" target="_blank"
+                            rel="noopener noreferrer" aria-label="Skycast Weather App source code on GitHub">
+                            GitHub
+                        </a>
+                    </div>
+
+                </article>
+
+            </div>
 
         </section>
 
